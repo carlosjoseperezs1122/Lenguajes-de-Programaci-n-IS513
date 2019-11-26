@@ -21,7 +21,7 @@ BNF
 ‘sino’ {<sentencias>}
 <condición> :: = <comparación>
 <bucle_mientras> :: =  ‘mientras’(<condición>){<sentencias>}
-<ciclo_repetir> ::= 'repetir '<sentencias>' hasta ('<condicion>')'
+<bucle_repetir> ::= 'repetir '<sentencias>' hasta ('<condicion>')'
 <sentencias>::=<declaraciones>|<asignación>|<bloque>|<sentencias><bloque>|<sentencias><declaraciones>|<sentencias><asignación>
 <bloque> :: = <condicional>|<bucle_mientras>|<bucle_repetir>
 <lectura> ::= 'leer '<identificador>
