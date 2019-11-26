@@ -1,0 +1,29 @@
+BNF 
+
+<programa> :: =  ini{<declaraciones> <sentencias>} fin
+<digito> :: =  ‘0’|’1’|’2’|’3’|’4’|’5’|’6’|’7’|’8’|’9’
+<letra>::=‘a’|’b’|’c’|’d’|’e’|’f’|’g’|’h’|’i’|’j’|’k’|’l’|’m’|’n’|’ñ’|’o’|’p’|’q’|’r’|’s’|’t’|’u’|’v’|’w’|’x’|’y’|’z’|‘A’|’B’|’C’|’D’|’E’|’F’|’G’|’H’|’I’|’J’|’K’|’L’|’M’|’N’|’Ñ’|’O’|’P’|’Q’|’R’|’S’|’T’|’U’|’V’|’W’|’X’|’Y’|’Z’
+<tipo dato> :: = ‘entero’|’cadena’|’decimal’
+<identificador>::=<letra>|<identificador><letra>|<identificador><digito>
+<variable> :: = <tipo dato><identificador>
+<declaraciones> :: = <variable>|<constante>
+<constante> :: = ‘const’<identificador>
+<operador> :: = ‘+’|’-‘|’*’|’/’
+<numero> :: = <digito> | <numero><digito>
+<entero> ::= <numero>|<signo><numero>
+<cadena> :: = <letra> | <cadena><letra>
+<decimal> ::= <numero>'.'<numero>
+<asignación> :: = <variable> ‘=’ <expm>|<constante> ‘=’ <expm>|<variable> ‘=’ <numero>|<constante> ‘=’ <numero>|<variable> ‘=’ <letra>|<constante> ‘=’ <letra>|<constante> ‘=’ <letra>|<variable> ‘=’ <cadena>|<constante> ‘=’ <cadena>|<identificador> ‘=’<exmp>| identificador> ‘=’<numero>| identificador> ‘=’<letra>| identificador> ‘=’<cadena>
+<expm> :: = <numero><operador><numero>| <expm><operador><numero>
+<operadorcomp> :: = ‘==’|’ ===’|’>’|’<’|’>=’|’ <=’|’!=’
+<comparación> :: = <variable><operadorcomp><expm>|<variable><operadorcomp><variable>|<variable><operadorcomp><letra>|<variable><operadorcomp><cadena>|<variable><operadorcomp><constante>|<variable><operadorcomp><letra>|<variable><operadorcomp><numero>
+<condicional> :: = ‘si’(<condición>){<sentencias>} | ‘si ’ (<condición>){<sentencias>}
+‘sino’ {<sentencias>}
+<condición> :: = <comparación>
+<bucle_mientras> :: =  ‘mientras’(<condición>){<sentencias>}
+<ciclo_repetir> ::= 'repetir '<sentencias>' hasta ('<condicion>')'
+<sentencias>::=<declaraciones>|<asignación>|<bloque>|<sentencias><bloque>|<sentencias><declaraciones>|<sentencias><asignación>
+<bloque> :: = <condicional>|<bucle_mientras>|<bucle_repetir>
+<lectura> ::= 'leer '<identificador>
+<puntero> ::= 'cursor '<punto>
+<punto> ::= <entero>','<entero>
