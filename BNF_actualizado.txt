@@ -27,3 +27,4 @@ BNF
 <lectura> ::= 'leer '<identificador>
 <puntero> ::= 'cursor '<punto>
 <punto> ::= <entero>','<entero>
+
