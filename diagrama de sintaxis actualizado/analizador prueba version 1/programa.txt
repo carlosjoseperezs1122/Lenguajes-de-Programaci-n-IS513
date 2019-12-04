@@ -1,0 +1,11 @@
+inicio{
+	entero variable2 = variable+4;
+	enterovariable = "dfdf";
+	caracter nombre;
+	mientras(variable>variable2)
+	{
+		entero x=4;
+		imprimir("hola");
+		nombre = in();
+	}
+}fin
