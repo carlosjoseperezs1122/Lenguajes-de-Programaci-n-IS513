@@ -98,5 +98,6 @@ main( int argc,char *argv[]){
 		yyin = stdin;
 	}
 	yylex();
-	return 0;	
+	return 0;
+	
 }
